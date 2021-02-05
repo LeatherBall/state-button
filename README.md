@@ -1,12 +1,14 @@
-
-# 动效状态按钮(ls-state-button)
-
-#### 带有提交动画效果的按钮，支持 `H5` `vue` `app`
-
 ## 说明
-这是一个[uniapp](https://uniapp.dcloud.io/)项目，基于Vue 2.0
-通常用于表单提交的提交按钮，它带有提交中以及提交成功的状态动画，既可以给用户一个友好的提交等待提示，又可以防止用户重复点击。
+这是一个[uniapp](https://uniapp.dcloud.io/)项目，基于Vue 2.0 动画效果纯css实现，体积小，运行流畅！
+通常用于表单提交、用户登录等，它带有提交中以及提交成功的状态动画，既可以给用户一个友好的提交等待提示，又可以防止用户重复点击。
 
+## 源码地址
+GitHub地址：[https://github.com/LeatherBall/state-button.git](https://github.com/LeatherBall/state-button.git)
+
+uniapp插件市场地址：[https://ext.dcloud.net.cn/plugin?id=4125](https://ext.dcloud.net.cn/plugin?id=4125)
+
+## 效果预览
+[![y8VaMn.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc4f1b91055948cf965da5d86b168461~tplv-k3u1fbpfcp-zoom-1.image)](https://imgchr.com/i/y8VaMn)
 
 ## 用法示例
 
@@ -40,7 +42,7 @@ export default {
 	
 ## 组件参数
 |  属性名   | 类型  | 默认值  | 说明  |
-|  ----  | ----  | ----  |
+|  ----  | ----  | ----  | ----  |
 | color  | `String` | #19cc95 | 按钮主题颜色 |
 | font-color  | `String` | #ffffff | 文字颜色 |
 | shadow  | `Boolean` | true | 是否显示按钮阴影 |
@@ -51,7 +53,7 @@ export default {
 
 ## 组件方法
 |  方法名   |  说明  | 方法参数 |  注  |
-|  ----  | ----  |
+|  ----  | ----  | ----  | ----  |
 | init()  |  初始化按钮状态  | 无 | 此方法会将按钮初始化至点击前的状态 |
 | success(callback)  |  提交成功  | `Function` | 此方法会将按钮状态置为成功，此方法接收一个回调方法，具体用法请看下方`success方法参数说明` |
 | fail(toast)  |  提交失败  | `String` | 此方法会将按钮状态置为失败，此方法接收一个`String`类型的参数，如果不为空，失败时会一并弹出指定的toast提示 |
