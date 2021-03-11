@@ -129,8 +129,12 @@ export default {
 			}
 		},
 		fail(toast) {
-			this.buttonStyle = { 'background-color': this.mainColor, 'border-color': this.mainColor };
-			this.status = 'available';
+			// 延迟0.2s执行，给按钮submit一个执行时间，确保状态重置一定能成功
+			clearTimeout(buttonStyleSIT);
+			buttonStyleSIT = setTimeout(() => {
+				this.buttonStyle = { 'background-color': this.mainColor, 'border-color': this.mainColor };
+				this.status = 'available';
+			}, 200);
 			if (toast) {
 				uni.showToast({
 					icon: 'none',
